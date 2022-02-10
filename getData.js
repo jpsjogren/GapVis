@@ -1,7 +1,7 @@
 
 const ZwiftPacketMonitor = require('@zwfthcks/zwift-packet-monitor')
 const http = require('http');
-const monitor = new ZwiftPacketMonitor('localhost')
+const monitor = new ZwiftPacketMonitor('192.168.1.106')
 
 let data = []
 let bunches = []
