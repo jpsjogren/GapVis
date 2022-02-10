@@ -66,14 +66,14 @@ function createBunches(){
       ids.push(data[i].id)
       speed = data[i].speed
       distance = data[i].distance
-      gap = Math.round(data[i].distance*1000) - (Math.round(data[i+1].distance*1000))
+      //gap = 
     }
     else {
       bunches.push({
         size: ids.length,
         speed: speed,
         distance: distance,
-        gap: gap,
+        gap: Math.round(data[i].distance*1000) - (Math.round(data[i+1].distance*1000)),
         ids: ids
       })
     
