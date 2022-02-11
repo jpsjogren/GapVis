@@ -1,0 +1,31 @@
+
+.oneline {
+    width: 100px;
+    height: 100px;
+    border: solid 1px #ccc;
+    display: inline-block;
+   }
+#inner {
+    font-size: 12px;
+}
+
+.logo{
+    z-index: 2;
+}
+.riders{
+    z-index: 1;
+}
+.input{
+    margin-top: 100px;
+}
+td {
+    position: relative;
+    vertical-align: top;
+    height: 80px;
+    text-align: bottom;             
+}
+
+td span {
+    position: absolute;
+    bottom: 0;
+}
