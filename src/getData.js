@@ -2,7 +2,13 @@ const ZwiftPacketMonitor = require('@zwfthcks/zwift-packet-monitor')
 const http = require('http');
 var ip = require('ip');
 const monitor = new ZwiftPacketMonitor(ip.address())
+
+//Display local IP
+console.log();
 console.log(ip.address());
+console.log();
+// Welcome message & "instuctions"
+console.log("GapVis Backend is running, quit with Ctrl + C");
 
 let data = []
 let bunches = []
