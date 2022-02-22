@@ -10,7 +10,6 @@ async function getapi(url) {
     var data = await response.json();
     
     show(data);
-    test()
 }
 
 async function getJSON() {
