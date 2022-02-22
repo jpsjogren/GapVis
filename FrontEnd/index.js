@@ -10,6 +10,7 @@ async function getapi(url) {
     var data = await response.json();
     
     show(data);
+    test()
 }
 
 async function getJSON() {
@@ -25,13 +26,16 @@ async function getJSON() {
 
 // Calling that async function
 getapi(api_url);
-getJSON();
+//getJSON();
 
 
 
-function test(data) {
+function test() {
+    fetch('./file.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
 
-    document.getElementById("test1").innerText = data;
+    document.getElementById("test1").innerText = data.riders;
 
 }
 function show(data) {
