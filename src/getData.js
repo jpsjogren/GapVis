@@ -92,9 +92,6 @@ function createBunches(){
   //console.log(bunches);
   return bunches;
 }
-var msg = require('./ip.js');
-console.log(msg);
-
 
 const requestListener = function (req, res) {
   const headers = {
