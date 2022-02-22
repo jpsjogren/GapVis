@@ -1,7 +1,7 @@
-
 const ZwiftPacketMonitor = require('@zwfthcks/zwift-packet-monitor')
 const http = require('http');
-const monitor = new ZwiftPacketMonitor('192.168.1.106')
+var ip = require('./ip');
+const monitor = new ZwiftPacketMonitor(ip)
 
 let data = []
 let bunches = []
@@ -92,6 +92,8 @@ function createBunches(){
   //console.log(bunches);
   return bunches;
 }
+var msg = require('./ip.js');
+console.log(msg);
 
 
 const requestListener = function (req, res) {
