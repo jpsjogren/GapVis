@@ -31,7 +31,8 @@ getJSON();
 
 function test(data) {
 
-    document.getElementById("test1").innerHTML = data;
+    document.getElementById("test1").innerText = data;
+
 }
 function show(data) {
     
