@@ -2,18 +2,25 @@ const ZwiftPacketMonitor = require('@zwfthcks/zwift-packet-monitor')
 const http = require('http');
 var ip = require('ip');
 const monitor = new ZwiftPacketMonitor(ip.address())
+console.log(ip.address());
 
 let data = []
 let bunches = []
 let distBetweenBunches = 10 // 7 meter
 
-var loop = 0;
+
 monitor.on('incomingPlayerState', (playerState, serverWorldTime) => {
   addValues(playerState);
   getData();
 })
 
 const start = monitor.start()
+
+
+// Reset the player stats every 30 sec. Good for when changing events or similar. 
+setInterval( function  () {
+  data = [];
+},30000);
 
 function addValues(playerState){
   let obj = data.find((o, i) => {
@@ -50,7 +57,6 @@ function sortData(){
 function createBunches(){
   bunches = []
   var len = data.length
-  let riders = 0
   let ids=[]
   let speed = 0
   let distance = 0
@@ -103,7 +109,7 @@ const requestListener = function (req, res) {
 
   res.writeHead(200, headers);
   res.write(JSON.stringify(createBunches()));
-  res.end();//bunches);
+  res.end();
 }
 
 const server = http.createServer(requestListener);
