@@ -1,4 +1,5 @@
 const api_url = 'http://192.168.1.106:8080/'
+const file = require('./file.js');
 
 // Defining async function
 async function getapi(url) {
@@ -31,11 +32,8 @@ getapi(api_url);
 
 
 function test() {
-    fetch('./file.json')
-        .then(response => response.json())
-        .then(data => console.log(data));
 
-    document.getElementById("test1").innerText = data.riders;
+    document.getElementById("test1").innerText = file;
 
 }
 function show(data) {
