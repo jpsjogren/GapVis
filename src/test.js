@@ -1,6 +1,2 @@
-var msg = require('./ip');
-console.log(typeof msg);
-
-
-var ip = require('ip');
-console.log(ip.address());
+var ip = require('./ip.js');
+console.log(ip);
