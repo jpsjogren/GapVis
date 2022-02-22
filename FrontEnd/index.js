@@ -120,4 +120,4 @@ function readTextFile(file)
     rawFile.send(null);
 }
 
-readTextFile("file:///file.txt");
+readTextFile("file:///C:\Users\jocke\testing\FrontEnd\file.txt");
