@@ -12,17 +12,6 @@ async function getapi(url) {
     show(data);
 }
 
-async function getJSON() {
-    
-    // Storing response
-    const response = await fetch('./file.json');
-    
-    // Storing data in form of JSON
-    var data = await response.json();
-    
-    test(data);
-}
-
 // Calling that async function
 getapi(api_url);
 
