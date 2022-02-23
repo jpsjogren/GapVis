@@ -124,6 +124,7 @@ const requestListener = function (req, res) {
       res.write(JSON.stringify({"test": 123}));
       res.end();
       break;
+  }
 }
 
 const server = http.createServer(requestListener);
