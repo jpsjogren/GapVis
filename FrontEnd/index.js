@@ -49,7 +49,7 @@ function show(data) {
             continue;
         }
 
-        if (ids.inclides(data[i])){
+        if (ids.includes(data[i])){
             logo = '<img class="logo" height="15px" src="img/zp.png">';
         }
         pic = '<img class="riders" height="36px" src="img/';
