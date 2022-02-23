@@ -113,9 +113,17 @@ const requestListener = function (req, res) {
     'Content-Type': 'application/json',
   };
 
-  res.writeHead(200, headers);
-  res.write(JSON.stringify(createBunches()));
-  res.end();
+  switch(req.url){
+    case "/":
+      res.writeHead(200, headers);
+      res.write(JSON.stringify(createBunches()));
+      res.end();
+      break;
+    case "/ttt":
+      res.writeHead(200, headers);
+      res.write(JSON.stringify({"test": 123});
+      res.end();
+      break;
 }
 
 const server = http.createServer(requestListener);
