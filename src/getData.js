@@ -121,7 +121,7 @@ const requestListener = function (req, res) {
       break;
     case "/ttt":
       res.writeHead(200, headers);
-      res.write(JSON.stringify({"test": 123});
+      res.write(JSON.stringify({"test": 123}));
       res.end();
       break;
 }
