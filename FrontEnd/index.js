@@ -1,13 +1,13 @@
+// Set you local ip adress here 👇
 const api_url = 'http://192.168.1.106:8080/'
 
 
+// Set you SZ riders here to have logo show in bunches, comma separate between id.
+let ids = [496294,2468062,190647]
 
-let ids = [
-    496294,
-    2468062,
-    190647
-]
 
+// Maybe some TTT specific stuff here, this does nothing at this time
+let ttt = [496294,2468062,190647]
 
 
 
