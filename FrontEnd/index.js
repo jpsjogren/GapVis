@@ -83,9 +83,7 @@ function show(data) {
                 </td>`;
     
     }
-    url_string = "https://example.com?options[]=one&options[]=two";
-    url = new URL(url_string);
-    options = url.searchParams.getAll("options[]");
+    
     // Setting innerHTML as tab variable
     document.getElementById("wrap").innerHTML = tab;
     document.getElementById("test").innerHTML = options;
