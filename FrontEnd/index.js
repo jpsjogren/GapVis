@@ -44,9 +44,9 @@ function show(data) {
         }
 
         
-        if (ids.inclides(data[i])){
+        /*if (ids.inclides(data[i])){
             logo = '<img class="logo" height="15px" src="img/zp.png">';
-        }
+        }*/
         pic = '<img class="riders" height="36px" src="img/';
         switch (data[i].size) {
             case 1:
