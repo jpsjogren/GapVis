@@ -52,6 +52,9 @@ function show(data) {
         if (ids.includes(data[i])){
             logo = '<img class="logo" height="15px" src="img/zp.png">';
         }
+        else{
+            logo = ''
+        }
         pic = '<img class="riders" height="36px" src="img/';
         switch (data[i].size) {
             case 1:
