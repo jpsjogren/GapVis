@@ -37,14 +37,16 @@ function show(data) {
         len = numberOfBunches
     }
 
-
+    let ids = ids()
     for (let i = (len-1); i >= 0; i--) {
         if(data[i].size == 0){
             continue;
         }
 
-        //if (arr.filter(element => data[i].ids.includes(element)))
-        logo = '<img class="logo" height="15px" src="img/zp.png">';
+        
+        if (ids.inclides(data[i])){
+            logo = '<img class="logo" height="15px" src="img/zp.png">';
+        }
         pic = '<img class="riders" height="36px" src="img/';
         switch (data[i].size) {
             case 1:
