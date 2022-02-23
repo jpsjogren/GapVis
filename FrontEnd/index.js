@@ -43,7 +43,7 @@ function show(data) {
             continue;
         }
 
-        
+        let logo = ''
         /*if (ids.inclides(data[i])){
             logo = '<img class="logo" height="15px" src="img/zp.png">';
         }*/
