@@ -49,7 +49,7 @@ function show(data) {
             continue;
         }
 
-        if (ids.includes(data[i])){
+        if (ids.some(r=> data[i].ids.includes(r))){
             logo = '<img class="logo" height="15px" src="img/zp.png">';
         }
         else{
