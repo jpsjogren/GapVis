@@ -5,7 +5,7 @@ const monitor = new ZwiftPacketMonitor(ip.address())
 
 //Display local IP
 console.log();
-console.log(ip.address());
+console.log("Your local IP: " + ip.address());
 console.log();
 // Welcome message & "instuctions"
 console.log("GapVis Backend is running, quit with Ctrl + C");
@@ -121,7 +121,7 @@ const requestListener = function (req, res) {
       break;
     case "/ttt":
       res.writeHead(200, headers);
-      res.write(JSON.stringify({"test": 123}));
+      res.write(JSON.stringify(data));
       res.end();
       break;
   }
