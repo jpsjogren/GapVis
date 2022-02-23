@@ -1,5 +1,23 @@
 const api_url = 'http://192.168.1.106:8080/'
 
+
+
+let ids = [
+    496294,
+    2468062,
+    2821987
+]
+
+
+
+
+/************************************************************************** 
+
+    Don't touch this if you don't know what you are doing :)
+
+**************************************************************************/
+
+
 // Defining async function
 async function getapi(url) {
     
@@ -26,15 +44,14 @@ function show(data) {
         len = numberOfBunches
     }
 
-    //let ids = ids()
     for (let i = (len-1); i >= 0; i--) {
         if(data[i].size == 0){
             continue;
         }
 
-        //if (ids.inclides(data[i])){
+        if (ids.inclides(data[i])){
             logo = '<img class="logo" height="15px" src="img/zp.png">';
-        //}
+        }
         pic = '<img class="riders" height="36px" src="img/';
         switch (data[i].size) {
             case 1:
