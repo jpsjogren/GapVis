@@ -20,6 +20,11 @@ monitor.on('incomingPlayerState', (playerState, serverWorldTime) => {
   getData();
 })
 
+monitor.on('outgoingPlayerState', (playerState, serverWorldTime) => {
+  addValues(playerState);
+  getData();
+})
+
 const start = monitor.start()
 
 
