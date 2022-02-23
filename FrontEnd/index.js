@@ -26,7 +26,7 @@ function show(data) {
         len = numberOfBunches
     }
 
-    let ids = ids()
+    //let ids = ids()
     for (let i = (len-1); i >= 0; i--) {
         if(data[i].size == 0){
             continue;
@@ -83,7 +83,7 @@ function show(data) {
                 </td>`;
     
     }
-    
+
     // Setting innerHTML as tab variable
     document.getElementById("wrap").innerHTML = tab;
     document.getElementById("test").innerHTML = options;
