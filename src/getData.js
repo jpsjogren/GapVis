@@ -10,6 +10,7 @@ console.log();
 // Welcome message & "instuctions"
 console.log("GapVis Backend is running, quit with Ctrl + C");
 
+
 let data = []
 let bunches = []
 let distBetweenBunches = 10 // 7 meter
@@ -42,7 +43,7 @@ function addValues(playerState){
                   }
         return true; // stop searching
     }
-});
+  });
   if (obj == null){
     data.push(
       {
@@ -78,11 +79,13 @@ function createBunches(){
       speed = data[i].speed
       distance = data[i].distance
     }
-    if (!(Math.round(data[i].distance*1000) - (Math.round(data[i+1].distance*1000)) > distBetweenBunches)){
+    if (typeof data[i+1].distance == 'undefined'){
+        continue;
+    }
+    else if (!(Math.round(data[i].distance*1000) - (Math.round(data[i+1].distance*1000)) > distBetweenBunches)){
       ids.push(data[i].id)
       speed = data[i].speed
       distance = data[i].distance
-      //gap = 
     }
     else {
       bunches.push({
