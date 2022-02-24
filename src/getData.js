@@ -80,6 +80,9 @@ function createBunches(){
       distance = data[i].distance
     }
     if (typeof data[i+1] == 'undefined'){
+      if ((i+2) == len){
+        break;
+      }
         continue;
     }
     else if (!(Math.round(data[i].distance*1000) - (Math.round(data[i+1].distance*1000)) > distBetweenBunches)){
