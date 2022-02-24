@@ -79,7 +79,7 @@ function createBunches(){
       speed = data[i].speed
       distance = data[i].distance
     }
-    if (typeof data[i+1].distance == 'undefined'){
+    if (typeof data[i+1] == 'undefined'){
         continue;
     }
     else if (!(Math.round(data[i].distance*1000) - (Math.round(data[i+1].distance*1000)) > distBetweenBunches)){
